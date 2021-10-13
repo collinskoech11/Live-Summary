@@ -8,8 +8,7 @@ mongoose.connect('mongodb://localhost/blog', {
 })
 
 app.set('view engine', 'ejs')
-
-app.use('/articles', articleRouter)
+app.use(express.urlencoded({ extended: false}))
 
 app.get('/', (req, res) => {
     const articles = [{
@@ -25,5 +24,6 @@ app.get('/', (req, res) => {
     res.render('articles/index', { articles:articles })
 })
 
+app.use('/articles', articleRouter)
 
 app.listen(5000)// choose the server port to be used
