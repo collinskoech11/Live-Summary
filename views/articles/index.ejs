@@ -19,6 +19,8 @@
                 <div class="card-subtitle text-muted mb-2"> <%= article.createdAt.toLocaleDateString() %></div>
                 <div class="card-text mb-2"> <%= article.description %></div>
                 <a href="articles/<%= article.slug %>" class="btn btn-primary">Read full article</a>
+                <a href="articles/<%= article.slug %>" class="btn btn-secondary">Edit</a>
+                <a href="articles/<%= article.slug %>" class="btn btn-danger">Delete</a>
             </div>      
         </div>
     <%  }) %>
