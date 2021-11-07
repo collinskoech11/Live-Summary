@@ -10,7 +10,7 @@ mongoose.connect('mongodb://localhost/blog', {
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false}))
-app.use(express.static(__dirname + '/public'))
+app.use(express.static(__dirname + '/static'))
 
 app.get('/', async (req, res) => {
     const articles = await Article.find().sort({ createdAt: 'desc' })
