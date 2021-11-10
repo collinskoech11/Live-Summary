@@ -1,13 +1,13 @@
 const express = require('express')
 const Article = require('./../models/article')
 const router = express.Router()
-
+//route declarations 
 router.get('/new', (req, res) => {
     res.render('articles/new', { article: new Article() })
 })
 
-router.get('/:slug', async (req, res) => {
-    const article = await Article.findOne({slug: req.params.slug})
+router.get('/:slug', async (req, res) => {//use slug for page to generate access link
+    const article = await Article.findOne({slug: req.params.slug})//get individual slug in stead of array
     if (article == null) res.redirect('/')
     res.render('articles/show', { article: article })
 })
@@ -25,5 +25,10 @@ router.post('/', async  (req, res) => {
         res.render('articles/new', { article: article })
     }
     
+})
+//nethod overriding to implement delete function
+router.delete('/:id', async (req, res) => {
+    await Article.findByIdAndDelete(req.params.id)
+    res.redirect('/')
 })
 module.exports = router

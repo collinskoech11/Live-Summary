@@ -24,11 +24,13 @@ const articleSchema = new mongoose.Schema({
         unique: true
     }
 })
-articleSchema.pre('validate', function(next) {
+articleSchema.pre('validate', function(next) {//Right before we perform validation of the article
     if (this.title) {
-        this.slug = slugify(this.title, {lower: true, strict:true })
+        this.slug = slugify(this.title, {lower: true, strict:true })//create slug from the article title 
     }
 
     next()
+    
 })
+
 module.exports = mongoose.model('Article', articleSchema)
