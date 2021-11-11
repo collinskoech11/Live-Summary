@@ -1,3 +1,79 @@
 body{
     background-image: url('../img/19742.jpg');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    max-width:100vw;
+    overflow-x: hidden;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    max-width:100vw;
+}
+section{
+    width:100vw;
+    overflow-x: hidden;
+}
+.header-container{
+    display: flex;
+    width:100%;
+    height:70px;
+    text-align:center;
+}
+.header-container h1{
+    text-align: center;
+    margin:auto;
+
+}
+.body-con{
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:12.5%;
+    padding-right:12.5%;
+}
+.card{
+    width:45%;
+    height:auto;
+    background-color:#fff;
+    border:3px solid gray;
+    border-radius: 10px;
+    
+    margin:4px;
+    margin-left: 40px;
+    margin-top: 40px;
+    padding:50px;
+}
+.card .card-title{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+.card .card-body .btn-container{
+    display:flex;
+    margin-top:20px;
+}
+.card .card-body .btn-container button{
+    width:100px;
+    height: 40px;
+    border-radius: 10px;
+    
+    color: #fff;
+    margin-right:15px;
+    border:none;
+    
+}
+.card .card-body .btn-container .read{
+    background-color:rgb(118, 125, 125);
+}
+.card .card-body .btn-container .edit{
+    background-color:blue;
+}
+.card .card-body .btn-container .delete{
+    background-color:red;
+}
+.card .card-body .btn-container button a{
+    color:#fff;
+    text-decoration: none;
+    text-transform:uppercase;
 }
