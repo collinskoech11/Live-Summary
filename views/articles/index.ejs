@@ -23,7 +23,7 @@
         </section>
         <section id="Desc-Container">
             <div class="desc-container">
-                <h1>Where <i><span>Students</span></i><br/> meet academic excellence</h1>
+                <h1>Where <i><span>Students</span></i><br/> meet <span style="color:rgb(155,155,250)">academic</span> excellence.</h1>
                 <h2>Live Summary helps students, teachers, and schools access the tools<br/> and events they need to shape the next generation of software development.</h2>
                 <button>Join our Global Campus</button>
             </div>
@@ -52,6 +52,12 @@
                 </div>
             </div>
         </section>
+        <section id="Desc-Container">
+            <div class="desc-container">
+                <h1 class="text" style="color:rgb(155,155,250)">Get a glimpse of what to expect.</h1>
+                <h2>Come and connect, learn, and grow with the Live Summary student community on Campus.</h2>
+            </div>
+        </section>
         <section id="BodyContainer">
             <div class="body-con">
                 <% articles.forEach(article => { %>        
@@ -62,10 +68,10 @@
                             <div class="card-text mb-2"> <%= article.description %></div>
                             <div class="btn-container">
                                 <button class="read"><a href="articles/<%= article.slug %>" class="btn btn-primary">Read full article</a></button>
-                                <button class="edit"><a href="/articles/edit/<%= article.id %>" class="btn btn-secondary">Edit</a></button>
+                                <!--<button class="edit"><a href="/articles/edit/<%= article.id %>" class="btn btn-secondary">Edit</a></button>
                                 <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
                                     <button type="submit" class="btn btn-danger delete">DELETE</button>
-                                </form>
+                                </form> -->
                             </div>
                         </div>      
                     </div>
@@ -95,6 +101,19 @@
 
                     <h4> Build a tech community at your school with training and support from GitHub. Campus Experts learn public speaking, technical writing, community leadership, and software development skills that will help you improve your campus.</h4>
                     <a href=""><h2>Become a Reader </h2></a>
+                </div>
+            </div>
+        </section>
+        <section class="selector">
+            <div class="selector">
+                <div class="image-container">
+                    <img src="./img/calendar.png" alt="">
+                </div>
+                <div class="text-container">
+                    <h2>Get email notifications for important dates</h2><br/><br/><br/>
+                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, architecto. Voluptate nam neque quo in laboriosam ipsa temporibus laborum veritatis reprehenderit? Hic officiis mollitia inventore modi fugit fugiat, eius soluta!</h4><br/><br/>
+                    <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur, architecto. Voluptate nam neque quo in laboriosam ipsa temporibus laborum veritatis reprehenderit? Hic officiis mollitia inventore modi fugit fugiat, eius soluta!</h4><br/><br/>
+                    <h3><a href="">Join the mailing list</a></h3>
                 </div>
             </div>
         </section>
@@ -148,7 +167,7 @@
             </div>
         </section>
    
-        <a href="/articles/new" class="btn btn-success">New Article</a>
+     <!--   <a href="/articles/new" class="btn btn-success">New Article</a>-->
     </div>
     <script>
         window.addEventListener('scroll', 
