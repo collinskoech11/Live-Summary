@@ -1,10 +1,10 @@
 body{
-    background-image: url('../img/19742.jpg');
+    background-image: url('../img/bg.jpg');
     background-size:cover;
-    background-repeat:no-repeat;
-    background-attachment:fixed;
+    background-repeat:repeat;
     max-width:100vw;
     overflow-x: hidden;
+    color:#fff;
 }
 *{
     margin:0;
@@ -20,12 +20,64 @@ section{
     display: flex;
     width:100%;
     height:70px;
-    text-align:center;
+}
+.header-container .title{
+    width:50%;
+    height:100%;
+    border-bottom:3px solid rgb(255, 255,255, 0.7);
+    padding:10px;
+    text-align:left;
+    padding-left:100px;
+}
+.header-container .title-buttons{
+    width:50%;
+    height:100%;
+    border-bottom:3px solid rgb(255, 255,255, 0.7);
+    padding:10px;
+    text-align:left;
+}
+.header-container .title-buttons button{
+    width:100px;
+    height:100%;
+    border:none;
+    background-color: transparent;
+    color:#fff;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor:pointer
+}
+.header-container .title-buttons .sign{
+    border:3px solid #fff; 
+    border-radius: 5px;
 }
 .header-container h1{
-    text-align: center;
     margin:auto;
+}
+.desc-container{
+    width:100%;
+    height:90vh;
+    text-align:center;
+    padding-top:20vh;
+}
+.desc-container h1{
+    font-size:6em;
+    padding-bottom:40px;
+    text-shadow: 2px 2px 8px rgb(0,0,50);
+}
+.desc-container h2{
+    text-shadow: 2px 2px 8px rgb(0,0,50);
 
+}
+.desc-container button{
+    width:200px;
+    height:70px;
+    border:none;
+    background-color: #000;
+    color:#fff;
+    border:3px solid #fff;
+    border-radius: 5px;
+    margin-top: 50px;
+    cursor:pointer;
 }
 .body-con{
     display:flex;
@@ -37,8 +89,9 @@ section{
     width:45%;
     height:auto;
     background-color:#fff;
-    border:3px solid gray;
+    border:3px solid rgb(0,0,50);
     border-radius: 10px;
+    background-color:#000;
     
     margin:4px;
     margin-left: 40px;
@@ -52,6 +105,7 @@ section{
 .card .card-body .btn-container{
     display:flex;
     margin-top:20px;
+    
 }
 .card .card-body .btn-container button{
     width:100px;
