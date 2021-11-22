@@ -139,7 +139,7 @@ section{
     background-color:#fff;
     border:3px solid rgb(0,0,50);
     border-radius: 10px;
-    background-color:#000;
+    background-color:rgb(0,0,10);
     /** hello world*/
     margin:4px;
     margin-left: 40px;
@@ -214,11 +214,13 @@ section{
 .selector .image-container{
     width:60%;
     height:auto;
+    background-color: rgb(0,0,10, 0.9);
 
 }
 .selector .image-container img{
     width:100%;
     height:auto;
+    margin-top:50px;
 }
 .selector .text-container{
     width:40%;
