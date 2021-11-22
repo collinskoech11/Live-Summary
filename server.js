@@ -19,6 +19,14 @@ app.get('/', async (req, res) => {
     res.render('articles/index', { articles:articles })
 })
 
+app.get('/Read', async (req, res) => {
+    const articles = await Article.find().sort({ createdAt: 'desc' })
+    res.render('articles/Read', { articles:articles })
+})
+app.get('/Write', async (req, res) => {
+    const articles = await Article.find().sort({ createdAt: 'desc' })
+    res.render('articles/Write', { articles:articles })
+})
 app.use('/articles', articleRouter)
 
 app.listen(5000)// choose the server port to be used
