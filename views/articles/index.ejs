@@ -19,17 +19,21 @@
                     <a href="/Contact"><button>Contact us</button></a>
                     <a href="/SignIn"><button class="sign">Sign in</button></a>
                 </div>
+                <div class="title-nav-btn">
+                                
+                </div>
             </div>
         </section>
         <section id="Desc-Container">
             <div class="desc-container">
                 <h1>Where <i><span>Students</span></i><br/> meet <span style="color:rgb(155,155,250)">academic</span> excellence.</h1>
-                <h2>Live Summary helps students, teachers, and schools access the tools</h2><h2 class="ml11"><span class="text-wrapper"> <span class="line line"></span><span class=> and events they need to shape the next generation of software development.</span></span></h2>
+                <h2>Live Summary helps students, teachers, and schools access  the tools</h2>
+                <h2 id="text"></h2>
                 <button>Join our Global Campus</button>
             </div>
             <div class="desc-container">
                 <h1 class="text" style="color:rgb(155,155,250)">We've got covered</h1>
-                <h2>Live Summary helps students, teachers, and schools access the tools<br/> and events they need to shape the next generation of software development.</h2>
+                <h2 class="typing">Live Summary helps students, teachers, and schools access the tools<br/> and events they need to shape the next generation of software development.</h2>
             </div>
         </section>
         <section class="Difference">
@@ -139,7 +143,6 @@
 
                             Developer API <br><br>
                             Partners <br><br>
-                            Atom<br><br>
                             Electron<br><br>
                             Desktop app<br><br>
                             Mobile app<br><br>
@@ -153,7 +156,6 @@
                             Community Forum <br><br>
                             Proffesuional Services<br><br>
                             Learning Lab<br><br>
-                            Status<br><br>
                             Contact us<br><br>
                         </div>
                         <div class="footer-sub-sub">
@@ -177,8 +179,21 @@
         window.addEventListener('scroll', 
         function(){
             var tophead = document.querySelector('.header-container');
-            tophead.classList.toggle('fixed', window.scrollY > 100);
+            tophead.classList.toggle('fixed', window.scrollY >= 100);
         })
+        var i =0, text;
+        text = " and events they need to shape the next generation of software development."
+
+        function typing(){
+          
+                if(i<text.length){
+                    document.getElementById('text').innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing,200); 
+                }
+             
+        }
+        typing();
         console.log('hello')
     </script>
 </body>

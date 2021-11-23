@@ -24,7 +24,7 @@
         <section id="Desc-Container">
             <div class="desc-container">
                 <h1 class="text" style="color:rgb(155,155,250)">Get started with study</h1>
-                <h2>Come and connect, learn, and grow with the Live Summary student community on Campus</h2>
+                <h2 id="text"></h2>
             </div>
         </section>
         <section class="selector">
@@ -98,6 +98,19 @@
             var tophead = document.querySelector('.header-container');
             tophead.classList.toggle('fixed', window.scrollY > 100);
         })
+        var i =0, text;
+        text = "Come and connect, learn, and grow with the Live Summary student community on Campus"
+
+        function typing(){
+          
+                if(i<text.length){
+                    document.getElementById('text').innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typing,200); 
+                }
+             
+        }
+        typing();
         console.log('hello')
     </script>
 </body>

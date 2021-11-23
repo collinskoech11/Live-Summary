@@ -5,16 +5,261 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body{
+            background-image: url('../img/bg.jpg');
+            background-size:cover;
+            background-position:center;
+            background-repeat:no-repeat;
+            max-width:100vw;
+            overflow-x: hidden;
+            color:#fff;
+            font-family:sans-serif;
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            max-width:100vw;
+        }
+        section{
+            width:100vw;
+            overflow-x: hidden;
+        }
+        .header-container{
+            display: flex;
+            width:100%;
+            height:70px;
+        }
+        .fixed{
+            position: fixed;
+        }
+        .header-container .title{
+            width:50%;
+            height:100%;
+            padding:20px;
+            text-align:left;
+            padding-left:100px;
+            background-color:rgb(0,0,10);
+            color:rgb(155,155,250)
+        }
+        .header-container .title-buttons{
+            width:50%;
+            height:100%;
+            background-color:rgb(0,0,10);
+            padding:10px;
+            text-align:left;
+            color:rgb(155,155,250)
+        }
+        @media screen and (max-width:1000px){
+            .header-container .title{
+                width:80%;
+                padding-left:20px;
+            }
+            .header-container .title-buttons{
+                display:none;
+            }
+        }
+        .header-container .title-buttons button{
+            width:100px;
+            height:100%;
+            border:none;
+            background-color: transparent;
+            color:rgb(155,155,250);
+            font-weight: bold;
+            text-transform: capitalize;
+            cursor:pointer
+        }
+        .header-container .title-buttons .sign{
+            border:3px solid rgb(155,155,250); 
+            border-radius: 5px;
+        }
+        .header-container h1{
+            margin:auto;
+        }
+        .footer-container{
+        display:flex;
+        padding:75px;
+        height:auto;
+        background-color: rgb(0,0,10);
+        margin-top:100px;
+        color:rgb(155,155,250)
+    }
+    .footer-container {
+        border:3px solid rgb(155,155,250);
+    }
+    @media screen and (max-width:1000px){
+        .footer-container{
+            display:block;
+            height:auto;
+            padding:35px;
+        }
+    }
+    .footer-title{
+        width:40%;
+        height:auto;
+        padding: 50px;
+    }
+    .footer-sub{
+        display: flex;
+        width:50%;
+        height:auto;
+
+    }
+    @media screen and (max-width:1000px){
+        .footer-title, .footer-sub{
+            width:100%;
+            height:auto;
+        }
+
+    }
+    .footer-sub-sub{
+        width:20%;
+        margin:auto;
+        height:auto;
+        display:block;
+    }
+    .footer-sub-align{
+        display: flex;
+        width:100%;
+    }
+    @media screen and (max-width:1000px){
+        .footer-sub-sub{
+            width:100%;
+            height:auto;
+            margin:0;
+            padding-left:10px;
+            text-align:right;
+        }
+        .footer-sub-align{
+            display: block;
+        }
+    }
+    .selector{
+        width:100%;
+        height:auto;
+        display: flex;
+        padding:50px;
+        padding-top:0;
+    }
+    .selector .image-container{
+        width:60%;
+        height:auto;
+        background-color: rgb(0,0,10, 0.9);
+
+
+    }
+    @media screen and (max-width:1000px){
+        .selector{
+            display:block;
+            padding:0;
+        }
+        .selector .image-container{
+            width:100%;
+        }
+    }
+    .selector .image-container img{
+        width:100%;
+        height:auto;
+        margin-top:50px;
+    }
+    .selector .text-container{
+        width:40%;
+        display:block;
+        border-radius: 20px;
+        background-color: rgb(0,0,10);
+        margin-top:100px;
+        text-align: left;
+        padding:40px;
+        height:auto;
+    }
+    @media screen and (max-width:1000px) {
+        .selector .text-container{
+            width:100%;
+        }    
+    }
+    .selector .text-container h3 a{
+        color:rgb(155,155,250)
+    }
+    </style>
 </head>
 <body>
     <div class="container">
-    <h1 class="mb-4 mt-4"><%= article.title %></h1>
-    <div class="text-muted"><%= article.createdAt.toLocaleDateString() %></div> 
+        <section id="HeaderContainer">
+            <div class="header-container">
+                <div class="title"><h1 class="mb-4">Live Summary</h1></div>
+                <div class="title-buttons">
+                    <a href="/Read"><button>Reader</button></a>
+                    <a href="/Write"><button>Writer</button></a>
+                    <a href="/Benefits"><button>Benefits</button></a>
+                    <a href="/Contact"><button>Contact us</button></a>
+                    <a href="/SignIn"><button class="sign">Sign in</button></a>
+                </div>
+                <div class="title-nav-btn">
+                                
+                </div>
+            </div>
+        </section>
+        <section class="BodyContainer">
+            <h1 class="mb-4 mt-4"><%= article.title %></h1>
+            <div class="text-muted"><%= article.createdAt.toLocaleDateString() %></div> 
 
-    <div><%- article.sanitizedHtml %></div>
-    <a href="/" class=" btn btn-secondary">All Articles</a>
-    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+            <div><%- article.sanitizedHtml %></div>
+            <a href="/" class=" btn btn-secondary">All Articles</a>
+            <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+        </section>
+        <section class="FooterContainer">
+            <div class="footer-container">
+                <div class="footer-title">
+                    <h2>Live Summary</h2>
+                </div>
+                <div class="footer-sub">
+                    <div class="footer-sub-align">
+                        <div class="footer-sub-sub">
+                            <b>Product </b><br> <br><br>
+
+                            Features <br><br>
+                            Security <br><br>
+                            Business<br><br>
+                            Case studies<br><br>
+                            Pricing<br><br>
+                            Resources<br><br>
+                        </div>
+                        <div class="footer-sub-sub">
+                            <b>Explore</b> <br> <br><br>
+
+                            Developer API <br><br>
+                            Partners <br><br>
+                            Electron<br><br>
+                            Desktop app<br><br>
+                            Mobile app<br><br>
+                        </div>
+                    </div>
+                    <div class="footer-sub-align">
+                        <div class="footer-sub-sub">
+                            <b>Support</b> <br> <br><br>
+
+                            Docs <br><br>
+                            Community Forum <br><br>
+                            Proffesuional Services<br><br>
+                            Learning Lab<br><br>
+                            Contact us<br><br>
+                        </div>
+                        <div class="footer-sub-sub">
+                            <b>Company</b> <br> <br><br>
+
+                            About <br><br>
+                            Blog <br><br>
+                            Careers<br><br>
+                            Press<br><br>
+                            Social Impact<br><br>
+                            Shop<br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>
