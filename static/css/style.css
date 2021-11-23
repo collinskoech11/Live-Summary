@@ -229,6 +229,12 @@ section{
     background-color: rgb(0,0,10);
     margin-top:100px;
 }
+@media screen and (max-width:1000px){
+    .footer-container{
+        display:block;
+        height:auto;
+    }
+}
 .footer-title{
     width:40%;
     height:auto;
@@ -240,11 +246,28 @@ section{
     height:auto;
 
 }
+@media screen and (max-width:1000px){
+    .footer-title, .footer-sub{
+        width:100%;
+        height:auto;
+    }
+
+}
 .footer-sub-sub{
     width:20%;
     margin:auto;
     height:auto;
     display:block;
+}
+@media screen and (max-width:1000px){
+    .footer-sub-sub{
+        width:50%;
+        height:auto;
+        margin:0;
+    }
+    .footer-sub-align{
+        display: block;
+    }
 }
 .selector{
     width:100%;
