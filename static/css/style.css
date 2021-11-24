@@ -74,7 +74,10 @@ section{
     width:100%;
     height:auto;
     text-align:center;
-    padding-top:15vh;
+    padding-top:10vh;
+    overflow-y: hidden;
+    padding-bottom:20px;
+    background-color:rgb(0,0,10, 0.6)
 }
 .desc-container h1{
     font-size:4em;
@@ -234,7 +237,7 @@ section{
     color:rgb(155,155,250)
 }
 .footer-container {
-    border:3px solid rgb(155,155,250);
+    border-top:3px solid rgb(155,155,250);
 }
 @media screen and (max-width:1000px){
     .footer-container{
@@ -329,12 +332,16 @@ section{
 .selector .text-container h3 a{
     color:rgb(155,155,250)
 }
+#text{
+    height:auto;
+    position :relative;
+}
 #text::after{
     content:"";
     position:absolute;
     border-right: 3px solid white;
     width:1px;
-    height:40px;
+    height:100%;
     animation: blink 1.5s infinite;
 }
 .typing{
