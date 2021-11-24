@@ -52,6 +52,15 @@ section{
     padding:15px;
     cursor:pointer;
 }
+@media screen and (max-width:800px){
+    .header-container .title{
+        width:80%;
+    }
+    .header-container .title-nav-btn{
+        width:20%;
+    }
+
+}
 .header-container .title-nav-btn .nav-line{
     width:90%;
     height:3px;
@@ -66,25 +75,34 @@ section{
 .side-nav{
     position:absolute;
     top:0;
-    left: 0;
-    width:100vw;
+    right:-70vw;
+    width:70vw;
     height:100vh;
     z-index:1000;
     background-color:#fff;
     display:none;
+    transition:1.8s;
 
 }
+@media screen and (min-width:1000px){
+    .side-nav{
+        display:none;
+    }
+}
 .appear{
+    right:0;
+    transition:1.8s;
     display:block;
+    position:fixed;
 }
 .side-nav .side-nav-close{
     display:flex;
-    height:50px;
+    height:70px;
     flex-direction: row-reverse;
 }
 .side-nav .side-nav-close .close-btn{
-    width:50px;
-    height:50px;
+    width:70px;
+    height:60px;
     border:1px solid black;
     margin-right:3%;
 
