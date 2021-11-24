@@ -19,8 +19,17 @@
                     <a href="/Contact"><button>Contact us</button></a>
                     <a href="/SignIn"><button class="sign">Sign in</button></a>
                 </div>
-                <div class="title-nav-btn">
-                                
+                <div class="title-nav-btn" id="navigate">
+                    <div class="nav-line"></div>   
+                    <div class="nav-line"></div>  
+                    <div class="nav-line"></div>           
+                </div>
+            </div>
+        </section>
+        <section class="SideNav">
+            <div class="side-nav">
+                <div class="side-nav-close">
+                    <div class="close-btn"></div>
                 </div>
             </div>
         </section>
@@ -180,7 +189,12 @@
         function(){
             var tophead = document.querySelector('.header-container');
             tophead.classList.toggle('fixed', window.scrollY >= 100);
-        })
+        });
+        document.getElementById("navigate").addEventListener('click',
+            function(){
+                var thenav = document.querySelector(".side-nav");
+                thenav.classList.toggle('appear')
+            })
         var i =0, text;
         text = " and events they need to shape the next generation of software development."
 
